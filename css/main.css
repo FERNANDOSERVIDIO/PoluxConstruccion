@@ -299,7 +299,6 @@ a:hover {
     display: flex;
     justify-content: space-around;
     width: auto;
-    border: 1px solid white;
     padding-bottom: 10px; }
   .links, .links--footer {
     margin-top: 20px; }
@@ -335,6 +334,17 @@ a:hover {
     margin: 20px auto; }
   .box--bs {
     margin: 0px auto 20px auto; }
+  .gridEmpresa {
+    display: grid;
+    grid-template-areas: "empresa" "fotoEmpresa" "equipo" "fotoEquipo" "oficina" "fotoOficina";
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(6, 300px); }
+  .grid-fotoEmpresa {
+    margin: auto; }
+  .grid-fotoEquipo {
+    margin: auto; }
+  .grid-fotoOficina {
+    margin: auto; }
   .gridContacto {
     display: grid;
     grid-template-areas: "oficinas" "telefonos" "redes" "formulario" "formulario";
