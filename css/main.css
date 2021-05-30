@@ -352,3 +352,15 @@ a:hover {
     grid-template-rows: repeat(5, 200px);
     padding: 60px;
     grid-row-gap: 20px; } }
+
+@media (max-width: 400px) {
+  .links, .links--footer {
+    font-size: 14px; }
+  .gridContacto {
+    display: grid;
+    grid-template-areas: "oficinas" "telefonos" "redes" "formulario" "formulario";
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 200px);
+    padding: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px; } }
