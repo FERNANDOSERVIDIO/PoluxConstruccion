@@ -2,10 +2,16 @@ body, .mainImage {
   margin: 0px;
   padding: 0px; }
 
+ol {
+  list-style-type: none;
+  line-height: 25px;
+  padding-left: 0px; }
+
 ul {
   /* Interlineado y sangria */
+  list-style-type: none;
   line-height: 25px;
-  padding-left: 2px; }
+  padding-left: 0px; }
 
 h2 {
   display: block;
@@ -373,4 +379,10 @@ a:hover {
     height: 100px;
     width: 300px; }
   .fontSize-2 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .gridContacto {
+    display: grid;
+    grid-template-areas: "oficinas" "telefonos" "redes" "formulario" "formulario";
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(5, 200px);
+    grid-row-gap: 20px; } }

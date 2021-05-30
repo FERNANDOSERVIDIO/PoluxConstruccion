@@ -8,10 +8,18 @@ body{
     margin :0px;
     padding: 0px;
 }
+ol{
+    list-style-type: none;
+    line-height: 25px;
+    //padding-left: 2px;
+    padding-left: 0px;
+}
 ul{
     /* Interlineado y sangria */
+    list-style-type: none;
     line-height: 25px;
-    padding-left: 2px;
+    //padding-left: 2px;
+    padding-left: 0px;
 }
 h2 {
     display: block;
@@ -381,6 +389,7 @@ a:hover{
 
 }
 @media (max-width: 400px){
+    
     .links{
         font-size: $fontSize*0.7;
     }
@@ -410,5 +419,15 @@ a:hover{
     }
     .fontSize-2{
         font-size: $fontSize*1.5;
+    }
+    .gridContacto{
+        display: grid;
+        grid-template-areas:"oficinas" "telefonos" "redes" "formulario" "formulario" ;
+        grid-template-columns: 350px;
+        grid-template-rows: repeat(5, 200px);
+        //margin: 40px;
+        //padding: 60px;
+        //grid-column-gap: 20px;
+        grid-row-gap: 20px;
     }
 }
