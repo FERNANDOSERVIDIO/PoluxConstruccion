@@ -1,0 +1,360 @@
+$fontSize: 20px;
+$paddingSize: 10px;
+$color-red: #af2121;
+$color-white: rgb(253, 255, 233);
+$color-backgroundLogo: rgba(255, 248, 220, 0.527);
+$color-grey: rgb(44, 44, 44);
+body{
+    margin :0px;
+    padding: 0px;
+}
+ul{
+    /* Interlineado y sangria */
+    line-height: 25px;
+    padding-left: 2px;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: none;
+}
+.navBar{
+    display: flex;
+    height: 100px;
+    background-color: $color-grey;
+}
+.footerBar{
+    @extend .navBar;
+    height: 75px;
+    justify-content: space-around;
+}
+
+.footerLinksContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
+
+.redBlock{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 20px 0px;
+    background-color: $color-red;
+}
+
+.mainImage{
+    @extend body;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.links{
+    text-decoration: none;
+    color: $color-white;
+    margin-top: 70px;
+}
+
+.links:hover{
+    transform: scale(1.3 );
+    color: $color-red;
+    //font-size: $fontSize*1.5;
+    //margin-top: 60px;
+}
+
+.links--footer{
+    @extend .links;
+    margin-top: 20px;
+}
+
+.links--footer:hover{
+    transform: scale(1.1);
+    color: $color-red;
+}
+
+.linksFooter2{
+    text-decoration: none;
+    color: $color-white;
+}
+.linksFooter2:hover{
+    transform: scale(1.1);
+    color: $color-red;
+}
+.linksContainer{
+    width: 500px;
+    display: flex;
+    // border: 2px solid;
+    //border-color: white;
+    justify-content: center;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.logoBackground{
+    /* Recuadro semi translucido de fondo del texto flotante */
+    display: flex;
+    background-color: $color-backgroundLogo;
+    height: 350px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.imageFloat{
+    /* imagen flotannte sobre otra */
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    height: 132px;
+    width: 600px;
+}
+
+.boxesAreas{
+    /* define el espacio que va a ser usado por cajas */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px black;
+    height: 300px;
+    margin: 0px 20px;
+   
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.box--bs{
+    //para modificar el ressponsive de las cajas de bootstrap
+}
+
+.box--contacto{
+    @extend .box;
+    width: 500px;
+}
+
+.text-white{
+    color: $color-white;
+}
+
+.text-black{
+    color: black;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.myHr{
+    background-color: black;
+    width: 80%;
+}
+
+.form-Label-Normal{
+    height: 20px;
+    border-radius: 5px;
+}
+
+@for $i from 1 through 3 {
+    .fontSize-#{$i} {font-size: $fontSize*$i;}
+}
+
+@for $i from 1 through 3 {
+    .padding-#{$i}{padding: 0px $paddingSize*$i;}
+}
+
+@for $i from 1 through 3 {
+    .margin-#{$i}{margin: 0px $paddingSize*$i;}
+}
+
+@for $i from 1 through 3 {
+    .margin-top-#{$i}{margin-top: $paddingSize*$i;}
+}
+
+@each $elem in normal, bold, italic{
+    .font-#{$elem} {
+        font-family: 'Rubik', sans-serif;
+        font-style: $elem;}
+}
+
+@each $elem in center, space-around, space-between {
+    .flex#{$elem} {display: flex; justify-content: #{$elem};}
+}
+
+@mixin re-size($height, $width){
+    height: $height;
+    width: $width;
+
+}
+
+@mixin reSize($heigt, $width) {
+    height: $heigt;
+    width: $width;
+}
+
+.fotoEmpresa{
+    @include reSize(200px, 300px);
+}
+
+.gridEmpresa{
+    display: grid;
+    grid-template-areas: 
+    "empresa empresa fotoEmpresa"
+    "fotoEquipo equipo equipo"
+    "oficina oficina fotoOficina";
+    grid-template-columns: repeat(3, 33,3%);
+    grid-template-rows: repeat(3, 300px);
+    margin: 40px;
+}
+
+@each $elem in empresa, fotoEmpresa, equipo, fotoEquipo, oficina, fotoOficina{
+    .grid-#{$elem} {grid-area: $elem;}
+}
+
+.gridContacto{
+    display: grid;
+    grid-template-areas: 
+    "oficinas formulario"
+    "telefonos formulario"
+    "redes formulario";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 200px);
+    //margin: 40px;
+    padding: 60px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+@each $elem in oficinas, telefonos, redes, formulario{
+    .grid-contacto-#{$elem} {
+        grid-area: $elem;
+        background-color: $color-white;
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px black;
+        //height: 200px;
+        margin: 0px 20px;
+    }
+}
+
+.label-1{
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.label-2{
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.button{
+    text-decoration: none;
+    background-color: $color-grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    padding: 10px 30px;
+    margin: 20px 50%;
+}
+
+.button:hover{
+    background-color: $color-red;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 800px){
+    .navBar{
+        display: flex;
+        height: 150px;
+        background-color: $color-grey;
+        flex-direction: column;
+    }
+    .linksContainer{
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+        border: 1px solid white;
+        padding-bottom: 10px;
+    }
+    .links{
+        margin-top: 20px;
+    }
+    .footerBar{
+        height: 150px;
+    }
+    .footerLinksContainer{
+        display: flex;
+        flex-direction: column;
+        //border: 1px solid white;
+    }
+    .links--footer{
+        text-decoration: none;
+        color: $color-white;
+        margin: 0px;
+        padding: 0px;
+    }
+    //.links{display: none;}
+    //.linksContainer{display: none;}
+    .imageFloat{display: none;}
+    .logoBackground{display: none;}
+
+    .boxesAreas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: white;
+        padding: 30px;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-white;
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px black;
+        max-width: 300px;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .box--bs{
+        margin: 0px auto 20px auto;
+    }
+    .gridContacto{
+        display: grid;
+        grid-template-areas:"oficinas" "telefonos" "redes" "formulario" "formulario" ;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(5, 200px);
+        //margin: 40px;
+        padding: 60px;
+        //grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+}
