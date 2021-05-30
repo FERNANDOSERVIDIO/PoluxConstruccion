@@ -399,4 +399,16 @@ a:hover{
         grid-column-gap: 20px;
         grid-row-gap: 20px;
     }
+    .imageFloat{
+        /* imagen flotannte sobre otra */
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        height: 100px;
+        width: 300px;
+    }
+    .fontSize-2{
+        font-size: $fontSize*1.5;
+    }
 }
