@@ -393,6 +393,22 @@ a:hover{
     .links{
         font-size: $fontSize*0.7;
     }
+    .gridEmpresa{
+        display: grid;
+        grid-template-areas: 
+        "empresa"
+        "empresa"
+        "fotoEmpresa"
+        "equipo"
+        "equipo"
+        "fotoEquipo"
+        "oficina"
+        "oficina"
+        "fotoOficina";
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(6, 200px);
+        //margin: 40px;
+    }
     .gridContacto{
         display: grid;
         grid-template-areas: 
