@@ -398,15 +398,18 @@ a:hover{
         grid-template-areas: 
         "empresa"
         "empresa"
+        //"empresa"
         "fotoEmpresa"
         "equipo"
         "equipo"
+        //"equipo"
         "fotoEquipo"
         "oficina"
         "oficina"
+        //"oficina"
         "fotoOficina";
         grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(6, 200px);
+        grid-template-rows: repeat(9, 210px);
         //margin: 40px;
     }
     .gridContacto{

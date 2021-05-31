@@ -364,9 +364,9 @@ a:hover {
     font-size: 14px; }
   .gridEmpresa {
     display: grid;
-    grid-template-areas: "empresa" "empresa" "fotoEmpresa" "equipo" "equipo" "fotoEquipo" "oficina" "oficina" "fotoOficina";
+    grid-template-areas: "empresa" "empresa" "fotoEmpresa" "equipo" "equipo" "fotoEquipo" "oficina" "oficina" "fotoOficina";
     grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(6, 200px); }
+    grid-template-rows: repeat(9, 210px); }
   .gridContacto {
     display: grid;
     grid-template-areas: "oficinas" "telefonos" "redes" "formulario" "formulario";
