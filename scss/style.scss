@@ -4,6 +4,7 @@ $color-red: #af2121;
 $color-white: rgb(253, 255, 233);
 $color-backgroundLogo: rgba(255, 248, 220, 0.527);
 $color-grey: rgb(44, 44, 44);
+$myBorder: 1px solid black;
 body{
     margin :0px;
     padding: 0px;
@@ -29,6 +30,14 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.text-title{
+    margin-left: 15%;
+    // border : $myBorder;
 }
 a:hover{
     text-decoration: none;
@@ -158,15 +167,27 @@ a:hover{
     transform: scale(1.1);
 }
 
-.box--bs{
-    //para modificar el ressponsive de las cajas de bootstrap
-}
-
 .box--contacto{
     @extend .box;
     width: 500px;
 }
-
+.imageArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.imageQuad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 260px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.textBox{
+    margin: 80px 100px;
+}
 .text-white{
     color: $color-white;
 }
@@ -183,12 +204,38 @@ a:hover{
     background-color: black;
     width: 80%;
 }
-
+.hr-none{
+    width: 0%;
+    border-width: 0px;
+    color: none;
+}
+.hr-shadow{
+    border-width: 0px;
+    background-color: blue;
+    box-shadow: 0px 0px 10px  black;
+}
+.shadowLine{
+    margin: 5px auto;
+    height: 0.5px;
+    width: 95%;
+    box-shadow: 0px 1px 3px black;
+    background-color: rgba(0, 0, 0, 0.705);
+}
 .form-Label-Normal{
     height: 20px;
     border-radius: 5px;
 }
 
+.center-horizontal{
+    margin: 0px auto;
+}
+.center-vertical{
+    //border: 1px solid black;
+    margin: 50% 0px;
+}
+.center-total{
+    margin: auto;
+}
 @for $i from 1 through 3 {
     .fontSize-#{$i} {font-size: $fontSize*$i;}
 }
@@ -204,7 +251,9 @@ a:hover{
 @for $i from 1 through 3 {
     .margin-top-#{$i}{margin-top: $paddingSize*$i;}
 }
-
+@for $i from 1 through 3 {
+    .margin-left-#{$i}{margin-left: $paddingSize*$i;}
+}
 @each $elem in normal, bold, italic{
     .font-#{$elem} {
         font-family: 'Rubik', sans-serif;
@@ -225,11 +274,16 @@ a:hover{
     height: $heigt;
     width: $width;
 }
+.image-small{
+    @include reSize(200px, 300px);
+}
 
 .fotoEmpresa{
     @include reSize(200px, 300px);
 }
-
+.fotoSeguridad{
+    @include reSize(200px, 300px);
+}
 .gridEmpresa{
     display: grid;
     grid-template-areas: 
@@ -295,6 +349,28 @@ a:hover{
     background-color: $color-red;
 }
 
+.showBorder{
+    //border: 1px solid black;
+}
+.image-text{
+    display: flex;
+    flex-direction: row;
+}
+.separator{
+    height: 200px;
+    width: auto;
+}
+.emptyBox{
+    width: auto;
+    height: 600px;
+    display: flex;
+}
+.text-alling-center{
+    text-align: center;
+}
+.color-grey{
+    color: $color-grey;
+}
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 800px){
@@ -386,7 +462,24 @@ a:hover{
         //grid-column-gap: 20px;
         grid-row-gap: 20px;
     }
-
+    .image-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-title{
+        margin: 0px auto;
+    }
+    .textBox{
+        margin: 20px;
+    }
+    .imageArea{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .imageQuad{
+     margin: 10px auto;
+    }
 }
 @media (max-width: 400px){
     
@@ -458,5 +551,21 @@ a:hover{
         width: auto;
         background-color: $color-grey;
         flex-direction: column;
+    }
+    .image-text{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    .imageArea{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .imageQuad{
+     margin: 10px auto;
+    }
+    .emptyBox{
+        width: 98%;
     }
 }
