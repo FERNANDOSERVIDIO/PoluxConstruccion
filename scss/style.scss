@@ -72,6 +72,8 @@ a:hover{
     display: flex;
     height: 100%;
     width: 100%;
+    animation-duration: 3s;
+    animation-name: aparecer;
 }
 
 .links{
@@ -127,19 +129,22 @@ a:hover{
     /* Recuadro semi translucido de fondo del texto flotante */
     display: flex;
     background-color: $color-backgroundLogo;
-    height: 350px;
-    width: 200px;
+    height: 132px;
+    width: 600px;
     border-radius: 5px;
 }
-
 .imageFloat{
     /* imagen flotannte sobre otra */
     display: flex;
     position: absolute;
     top: 60%;
-    left: 25%;
-    height: 132px;
-    width: 600px;
+    left: 30%;
+    //margin: auto 50%;
+    //height: 132px;
+    //width: 600px;
+    //border: 1px solid black;
+    animation-duration: 3s;
+    animation-name: aparecer;
 }
 
 .boxesAreas{
@@ -160,7 +165,7 @@ a:hover{
     box-shadow: 4px 4px 10px black;
     height: 300px;
     margin: 0px 20px;
-   
+   transition: scale 3s;
 }
 
 .box:hover{
@@ -328,21 +333,29 @@ a:hover{
     height: 20px;
     border-radius: 5px;
     border: 1px solid black;
+    transition: all 0.3s;
 }
-
+.label-1:focus{
+    height: 30px;
+}
 .label-2{
     height: 80px;
     border-radius: 5px;
     border: 1px solid black;
+    transition: all 0.3s;
 }
-
+.label-2{
+    height: 100px;
+}
 .button{
     text-decoration: none;
     background-color: $color-grey;
+    //transition: all 2s;
     border-radius: 10px;
     box-shadow: 2px 2px 5px black;
     padding: 10px 30px;
     margin: 20px 50%;
+    
 }
 
 .button:hover{
@@ -350,7 +363,7 @@ a:hover{
 }
 
 .showBorder{
-    //border: 1px solid black;
+    border: 1px solid black;
 }
 .image-text{
     display: flex;
@@ -371,6 +384,11 @@ a:hover{
 .color-grey{
     color: $color-grey;
 }
+@keyframes aparecer{
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 800px){

@@ -56,7 +56,9 @@ a:hover {
 .mainImage {
   display: flex;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: aparecer; }
 
 .links, .links--footer {
   text-decoration: none;
@@ -99,8 +101,8 @@ a:hover {
   /* Recuadro semi translucido de fondo del texto flotante */
   display: flex;
   background-color: rgba(255, 248, 220, 0.527);
-  height: 350px;
-  width: 200px;
+  height: 132px;
+  width: 600px;
   border-radius: 5px; }
 
 .imageFloat {
@@ -108,9 +110,9 @@ a:hover {
   display: flex;
   position: absolute;
   top: 60%;
-  left: 25%;
-  height: 132px;
-  width: 600px; }
+  left: 30%;
+  animation-duration: 3s;
+  animation-name: aparecer; }
 
 .boxesAreas {
   /* define el espacio que va a ser usado por cajas */
@@ -128,7 +130,8 @@ a:hover {
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
   height: 300px;
-  margin: 0px 20px; }
+  margin: 0px 20px;
+  transition: scale 3s; }
 
 .box:hover, .box--contacto:hover {
   transform: scale(1.1); }
@@ -279,9 +282,7 @@ a:hover {
 
 .gridEmpresa {
   display: grid;
-  grid-template-areas: "empresa empresa fotoEmpresa"
- "fotoEquipo equipo equipo"
- "oficina oficina fotoOficina";
+  grid-template-areas: "empresa empresa fotoEmpresa" "fotoEquipo equipo equipo" "oficina oficina fotoOficina";
   grid-template-columns: repeat(3, 33, 3%);
   grid-template-rows: repeat(3, 300px);
   margin: 40px; }
@@ -306,9 +307,7 @@ a:hover {
 
 .gridContacto {
   display: grid;
-  grid-template-areas: "oficinas formulario"
- "telefonos formulario"
- "redes formulario";
+  grid-template-areas: "oficinas formulario" "telefonos formulario" "redes formulario";
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(3, 200px);
   padding: 60px;
@@ -346,12 +345,20 @@ a:hover {
 .label-1 {
   height: 20px;
   border-radius: 5px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  transition: all 0.3s; }
+
+.label-1:focus {
+  height: 30px; }
 
 .label-2 {
   height: 80px;
   border-radius: 5px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  transition: all 0.3s; }
+
+.label-2 {
+  height: 100px; }
 
 .button {
   text-decoration: none;
@@ -363,6 +370,9 @@ a:hover {
 
 .button:hover {
   background-color: #af2121; }
+
+.showBorder {
+  border: 1px solid black; }
 
 .image-text {
   display: flex;
@@ -382,6 +392,12 @@ a:hover {
 
 .color-grey {
   color: #2c2c2c; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -432,12 +448,7 @@ a:hover {
     margin: 0px auto 20px auto; }
   .gridEmpresa {
     display: grid;
-    grid-template-areas: "empresa"
- "fotoEmpresa"
- "equipo"
- "fotoEquipo"
- "oficina"
- "fotoOficina";
+    grid-template-areas: "empresa" "fotoEmpresa" "equipo" "fotoEquipo" "oficina" "fotoOficina";
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(6, 300px); }
   .grid-fotoEmpresa {
@@ -477,11 +488,7 @@ a:hover {
     grid-template-rows: repeat(9, 210px); }
   .gridContacto {
     display: grid;
-    grid-template-areas: "oficinas"
- "telefonos"
- "redes"
- "formulario"
- "formulario";
+    grid-template-areas: "oficinas" "telefonos" "redes" "formulario" "formulario";
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, 200px);
     padding: 20px;
