@@ -279,7 +279,9 @@ a:hover {
 
 .gridEmpresa {
   display: grid;
-  grid-template-areas: "empresa empresa fotoEmpresa" "fotoEquipo equipo equipo" "oficina oficina fotoOficina";
+  grid-template-areas: "empresa empresa fotoEmpresa"
+ "fotoEquipo equipo equipo"
+ "oficina oficina fotoOficina";
   grid-template-columns: repeat(3, 33, 3%);
   grid-template-rows: repeat(3, 300px);
   margin: 40px; }
@@ -304,7 +306,9 @@ a:hover {
 
 .gridContacto {
   display: grid;
-  grid-template-areas: "oficinas formulario" "telefonos formulario" "redes formulario";
+  grid-template-areas: "oficinas formulario"
+ "telefonos formulario"
+ "redes formulario";
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(3, 200px);
   padding: 60px;
@@ -428,7 +432,12 @@ a:hover {
     margin: 0px auto 20px auto; }
   .gridEmpresa {
     display: grid;
-    grid-template-areas: "empresa" "fotoEmpresa" "equipo" "fotoEquipo" "oficina" "fotoOficina";
+    grid-template-areas: "empresa"
+ "fotoEmpresa"
+ "equipo"
+ "fotoEquipo"
+ "oficina"
+ "fotoOficina";
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(6, 300px); }
   .grid-fotoEmpresa {
@@ -468,7 +477,11 @@ a:hover {
     grid-template-rows: repeat(9, 210px); }
   .gridContacto {
     display: grid;
-    grid-template-areas: "oficinas" "telefonos" "redes" "formulario" "formulario";
+    grid-template-areas: "oficinas"
+ "telefonos"
+ "redes"
+ "formulario"
+ "formulario";
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, 200px);
     padding: 20px;
