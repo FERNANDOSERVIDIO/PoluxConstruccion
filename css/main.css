@@ -371,9 +371,6 @@ a:hover {
 .button:hover {
   background-color: #af2121; }
 
-.showBorder {
-  border: 1px solid black; }
-
 .image-text {
   display: flex;
   flex-direction: row; }
