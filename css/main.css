@@ -421,6 +421,18 @@ a:hover {
 .button:hover {
   background-color: #af2121; }
 
+.whatsAppIcon {
+  position: fixed;
+  right: 5%;
+  top: 80%;
+  transition: transform 0.5s; }
+  .whatsAppIcon img {
+    height: 100;
+    width: 100px; }
+
+.whatsAppIcon:hover {
+  transform: scale(1.1); }
+
 .image-text {
   display: flex;
   flex-direction: row; }
@@ -578,4 +590,6 @@ a:hover {
   .emptyBox {
     width: 98%; }
   .floatingWord {
+    display: none; }
+  .whatsAppIcon {
     display: none; } }

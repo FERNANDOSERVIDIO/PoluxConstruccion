@@ -417,6 +417,18 @@ a:hover{
 .button:hover{
     background-color: $color-red;
 }
+.whatsAppIcon{
+    position: fixed;
+    right: 5%;
+    top: 80%;
+    transition: transform 0.5s;
+    img{
+        @include reSize(100,100px)
+    }
+}
+.whatsAppIcon:hover{
+    transform: scale(1.1);
+}
 
 .showBorder{
     //border: 1px solid black;
@@ -643,4 +655,5 @@ a:hover{
         width: 98%;
     }
     .floatingWord{ display: none;}
+    .whatsAppIcon{ display: none;}
 }
