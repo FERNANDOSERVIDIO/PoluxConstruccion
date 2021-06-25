@@ -422,6 +422,8 @@ a:hover{
     right: 5%;
     top: 80%;
     transition: transform 0.5s;
+    animation-duration: 1.5s;
+    animation-name: sacudir;
     img{
         @include reSize(100,100px)
     }
@@ -432,6 +434,7 @@ a:hover{
 
 .showBorder{
     //border: 1px solid black;
+    border:none;
 }
 .image-text{
     display: flex;
@@ -456,7 +459,18 @@ a:hover{
     0% {opacity: 0;}
     100%{opacity: 1;}
 }
-
+@keyframes esperar {
+    0%{}
+    100%{}
+}
+@keyframes sacudir{
+    0%{}
+    80%{transform: rotate(0deg);}
+    85%{transform: rotate(45deg);}
+    90%{transform: rotate(-90deg);}
+    95%{transform: rotate(90deg);}
+    100%{transform: rotate(-45deg);}
+}
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 800px){
