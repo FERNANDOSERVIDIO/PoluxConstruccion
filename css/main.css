@@ -63,6 +63,32 @@ a:hover {
   animation-duration: 3s;
   animation-name: aparecer; }
 
+.paralaxImage, .paralax-index, .paralax-main, .paralax-empresa, .paralax-novedades, .paralax-proyectos, .paralax-contacto {
+  width: auto;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.paralax-index {
+  background-image: url(../Imagenes/Captura2.jpg); }
+
+.paralax-main {
+  background-image: url(../Imagenes/Captura2.jpg); }
+
+.paralax-empresa {
+  background-image: url(../Imagenes/edificios3_opt.jpg); }
+
+.paralax-novedades {
+  background-image: url(../Imagenes/Ciudad_opt.jpg); }
+
+.paralax-proyectos {
+  background-image: url(../Imagenes/Maqueta.jpg); }
+
+.paralax-contacto {
+  background-image: url(../Imagenes/edificios5_opt.jpg); }
+
 .links, .links--footer {
   text-decoration: none;
   color: #fdffe9;
@@ -107,6 +133,24 @@ a:hover {
   height: 132px;
   width: 600px;
   border-radius: 5px; }
+
+.floatingWord {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 248, 220, 0.527);
+  height: 132px;
+  width: 600px;
+  border-radius: 5px; }
+  .floatingWord h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: auto; }
+  .floatingWord img {
+    margin: 0px auto; }
 
 .imageFloat {
   /* imagen flotannte sobre otra */
@@ -170,7 +214,8 @@ a:hover {
 
 .myHr {
   background-color: black;
-  width: 80%; }
+  width: 80%;
+  margin: 9px auto; }
 
 .hr-none {
   width: 0%;
@@ -529,4 +574,6 @@ a:hover {
   .imageQuad {
     margin: 10px auto; }
   .emptyBox {
-    width: 98%; } }
+    width: 98%; }
+  .floatingWord {
+    display: none; } }
