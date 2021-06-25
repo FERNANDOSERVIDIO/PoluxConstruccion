@@ -131,10 +131,10 @@ a:hover {
   box-shadow: 4px 4px 10px black;
   height: 300px;
   margin: 0px 20px;
-  transition: scale 3s; }
+  transition: transform 1s; }
 
 .box:hover, .box--contacto:hover {
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 .box--contacto {
   width: 500px; }
