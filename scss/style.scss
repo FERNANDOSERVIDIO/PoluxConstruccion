@@ -122,6 +122,7 @@ a:hover{
     animation-duration: 3s;
     animation-name: aparecer;
 }
+//EFECTOS PARALAX PARA CADA PANTALLA
 .paralax-index{
     @extend .paralaxImage;
     background-image: url(../Imagenes/Captura2.jpg);
@@ -146,6 +147,7 @@ a:hover{
     @extend .paralaxImage;
     background-image: url(../Imagenes/edificios5_opt.jpg);
 }
+//--------------------------
 .links{ //marca el formato de los links
     text-decoration: none;
     color: $color-white;
@@ -179,17 +181,15 @@ a:hover{
 .linksContainer{
     width: 500px;
     display: flex;
-    // border: 2px solid;
-    //border-color: white;
     justify-content: center;
 }
 
-.flexColumn{
+.flexColumn{ //DISTRIBUCION INTERIOR EN COLUMNA
     display: flex;
     flex-direction: column;
 }
 
-.flexRow{
+.flexRow{ //DISTRIBUCION INTERIOR EN FILA
     display: flex;
     flex-direction: row;
 }
@@ -202,13 +202,14 @@ a:hover{
     width: 600px;
     border-radius: 5px;
 }
-.floatingWord{
+.floatingWord{ //CLASE PARA LA PALABRA FLOTANTE SOBRE LA IMAGEN PRINCIPAL
     display: flex;
     position: absolute;
+    //POSICION EN EL CENTRO
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    //-ms-transform: translate(-50%, -50%);
+    //FONDO DE COLOR
     background-color: $color-backgroundLogo;
     height: 132px;
     width: 600px;
@@ -357,7 +358,7 @@ a:hover{
 @each $elem in center, space-around, space-between {
     .flex#{$elem} {display: flex; justify-content: #{$elem};} //crea 3 clases con tipos de espaciados en flex diferentes
 }
-
+//REESCALA OBJETOS (PRINCIPALMENTE USADA EN IMAGES)
 @mixin re-size($height, $width){
     height: $height;
     width: $width;
@@ -378,6 +379,7 @@ a:hover{
 .fotoSeguridad{
     @include reSize(200px, 300px);
 }
+//GRID DE LA PAGINA 'EMPRESA'
 .gridEmpresa{
     display: grid;
     grid-template-areas: 
@@ -392,7 +394,7 @@ a:hover{
 @each $elem in empresa, fotoEmpresa, equipo, fotoEquipo, oficina, fotoOficina{
     .grid-#{$elem} {grid-area: $elem;}
 }
-
+//GRID DE LA PAGINA 'CONTACTO'
 .gridContacto{
     display: grid;
     grid-template-areas: 
@@ -401,7 +403,6 @@ a:hover{
     "redes formulario";
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, 200px);
-    //margin: 40px;
     padding: 60px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -417,7 +418,7 @@ a:hover{
         margin: 0px 20px;
     }
 }
-
+//ETIQUETAS LABEL DEL FORMULARIO DE CONTACTO
 .label-1{
     height: 20px;
     border-radius: 5px;
@@ -450,6 +451,7 @@ a:hover{
 .button:hover{
     background-color: $color-red;
 }
+// INCONO FLOTANTE DE WHATSAPP 
 .whatsAppIcon{
     position: fixed;
     right: 5%;
@@ -464,7 +466,8 @@ a:hover{
 .whatsAppIcon:hover{
     transform: scale(1.1);
 }
-
+// FUNCION MULETILLA -> SE AGREGA AL MAQUETAR EL HTML PARA VER LA EXTENCION DE UN OBJ
+// DESPUES SE LE QUITA EL VALOR Y LISTO
 .showBorder{
     //border: 1px solid black;
     border:none;
@@ -488,13 +491,10 @@ a:hover{
 .color-grey{
     color: $color-grey;
 }
+// ANIMACIONES
 @keyframes aparecer{
     0% {opacity: 0;}
     100%{opacity: 1;}
-}
-@keyframes esperar {
-    0%{}
-    100%{}
 }
 @keyframes sacudir{
     0%{}
@@ -505,6 +505,7 @@ a:hover{
     100%{transform: rotate(-45deg);}
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
+//                                            TABLET
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 800px){
     .navBar{
@@ -614,6 +615,9 @@ a:hover{
      margin: 10px auto;
     }
 }
+//--------------------------------------------------------------------------------------------------------------------------
+//              MOBILE
+//--------------------------------------------------------------------------------------------------------------------
 @media (max-width: 400px){
     
     .links{

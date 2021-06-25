@@ -490,10 +490,6 @@ a:hover {
   100% {
     opacity: 1; } }
 
-@keyframes esperar {
-  0% { }
-  100% { } }
-
 @keyframes sacudir {
   0% { }
   80% {
