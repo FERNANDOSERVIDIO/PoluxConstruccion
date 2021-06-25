@@ -575,7 +575,6 @@ a:hover{
         "fotoOficina";
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(6, 300px);
-        //margin: 40px;
     }
     .grid-fotoEmpresa{
         margin: auto;
@@ -591,9 +590,7 @@ a:hover{
         grid-template-areas:"oficinas" "telefonos" "redes" "formulario" "formulario" ;
         grid-template-columns: 400px;
         grid-template-rows: repeat(5, 200px);
-        //margin: 40px;
         padding: 60px;
-        //grid-column-gap: 20px;
         grid-row-gap: 20px;
     }
     .image-text{
@@ -640,7 +637,6 @@ a:hover{
         "fotoOficina";
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(9, 210px);
-        //margin: 40px;
     }
     .gridContacto{
         display: grid;
