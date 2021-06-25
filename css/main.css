@@ -93,7 +93,7 @@ a:hover {
 
 .links, .links--footer {
   text-decoration: none;
-  color: #fdffe9;
+  color: #f3ebeb;
   margin-top: 70px; }
 
 .links:hover, .links--footer:hover {
@@ -109,7 +109,7 @@ a:hover {
 
 .linksFooter2 {
   text-decoration: none;
-  color: #fdffe9; }
+  color: #f3ebeb; }
 
 .linksFooter2:hover {
   transform: scale(1.1);
@@ -175,7 +175,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fdffe9;
+  background-color: #f3ebeb;
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
   height: 300px;
@@ -206,7 +206,7 @@ a:hover {
   margin: 80px 100px; }
 
 .text-white {
-  color: #fdffe9; }
+  color: #f3ebeb; }
 
 .text-black {
   color: black; }
@@ -366,28 +366,28 @@ a:hover {
 
 .grid-contacto-oficinas {
   grid-area: oficinas;
-  background-color: #fdffe9;
+  background-color: #f3ebeb;
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
   margin: 0px 20px; }
 
 .grid-contacto-telefonos {
   grid-area: telefonos;
-  background-color: #fdffe9;
+  background-color: #f3ebeb;
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
   margin: 0px 20px; }
 
 .grid-contacto-redes {
   grid-area: redes;
-  background-color: #fdffe9;
+  background-color: #f3ebeb;
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
   margin: 0px 20px; }
 
 .grid-contacto-formulario {
   grid-area: formulario;
-  background-color: #fdffe9;
+  background-color: #f3ebeb;
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
   margin: 0px 20px; }
@@ -480,7 +480,7 @@ a:hover {
     flex-direction: column; }
   .links--footer {
     text-decoration: none;
-    color: #fdffe9;
+    color: #f3ebeb;
     margin: 0px;
     padding: 0px; }
   .imageFloat {
@@ -497,7 +497,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fdffe9;
+    background-color: #f3ebeb;
     border-radius: 10px;
     box-shadow: 4px 4px 10px black;
     max-width: 300px;
