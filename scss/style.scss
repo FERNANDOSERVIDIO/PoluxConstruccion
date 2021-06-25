@@ -61,7 +61,40 @@ a:hover{
     justify-content: space-around;
     margin: 20px 0px;
 }
-
+.footerBar-nav{
+    display: flex;
+    width: auto;
+    height: 550px;
+    background-color: $color-grey;
+    div{
+        //margin: 10px;
+        //margin-left: 50px;
+    }
+    h3{
+        color: $color-white;
+        font-family: 'Rubik', sans-serif;
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    a{
+        font-family: 'Rubik', sans-serif;
+        font-size: 24px;
+        color: $color-white;
+    }
+    p{
+        margin: 0px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 24px;
+        color: $color-white;
+    }
+    li{ padding: 5px 0px;}
+    li ol a{
+        color:$color-white;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+}
 .redBlock{ //define las caracteristicas del bloque roo
     display: flex;
     justify-content: center;

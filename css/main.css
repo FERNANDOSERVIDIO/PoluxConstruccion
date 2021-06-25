@@ -49,6 +49,33 @@ a:hover {
   justify-content: space-around;
   margin: 20px 0px; }
 
+.footerBar-nav {
+  display: flex;
+  width: auto;
+  height: 550px;
+  background-color: #2c2c2c; }
+  .footerBar-nav h3 {
+    color: #f3ebeb;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px; }
+  .footerBar-nav a {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    color: #f3ebeb; }
+  .footerBar-nav p {
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    color: #f3ebeb; }
+  .footerBar-nav li {
+    padding: 5px 0px; }
+  .footerBar-nav li ol a {
+    color: #f3ebeb;
+    padding-left: 10px;
+    font-size: 20px; }
+
 .redBlock {
   display: flex;
   justify-content: center;
