@@ -580,7 +580,9 @@ a:hover {
     flex-direction: column;
     justify-content: space-around; }
   .imageQuad {
-    margin: 10px auto; } }
+    margin: 10px auto; }
+  .floatingWord {
+    width: 350px; } }
 
 @media (max-width: 400px) {
   .links, .links--footer {
@@ -635,6 +637,14 @@ a:hover {
   .emptyBox {
     width: 98%; }
   .floatingWord {
-    display: none; }
+    width: 250px;
+    height: 100px; }
+    .floatingWord img {
+      height: 70px;
+      width: 196px;
+      margin: auto; }
   .whatsAppIcon {
-    display: none; } }
+    display: none; }
+  .logoPolux {
+    width: 100%;
+    height: auto; } }

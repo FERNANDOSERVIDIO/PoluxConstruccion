@@ -611,6 +611,9 @@ a:hover{
     .imageQuad{
      margin: 10px auto;
     }
+    .floatingWord{
+        width: 350px;
+    }
 }
 //--------------------------------------------------------------------------------------------------------------------------
 //              MOBILE
@@ -701,6 +704,17 @@ a:hover{
     .emptyBox{
         width: 98%;
     }
-    .floatingWord{ display: none;}
+    .floatingWord{ //display: none;
+        width: 250px;
+        height: 100px;
+        img{
+            @include reSize(70px, 196px );
+            margin: auto;
+        }
+    }
     .whatsAppIcon{ display: none;}
+    .logoPolux{
+        width: 100%;
+        height: auto;
+    }
 }
