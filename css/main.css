@@ -145,7 +145,8 @@ a:hover {
 .linksContainer {
   width: 500px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-right: 10px; }
 
 .flexColumn {
   display: flex;
